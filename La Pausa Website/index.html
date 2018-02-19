@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<title>CoderForge Template</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="container">
+    <div class="header clearfix">
+        <nav>
+            <img src="img/logo.jpg" />
+            <ul class="nav nav-pills float-right"> 
+                <li class="nav-item">
+                <a class="nav-link active" href="#">Home
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">How We Roll</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact Us</a>
+                </li>
+            </ul>
+        </nav>   
+    </div>
+
+    <div class="jumbotron">
+        <h1 class="display-3">Coder Forge @ La Pausa Cafe</h1>
+        <p class="lead">This meetup hopes to provide a weekly space for people interested in learning to code. With the current technology available
+        to us it is perfectly feasible to trade as a coder whilst you learn your full skill set.</p>
+        <p>
+            <a class="btn btn-lg btn-success" href="#" role="button">Sign up today</a>
+        </p>
+    </div>
+
+    <div class="row marketing">
+        <div class="col-lg-8">
+            <h4>La Pausa Cafe</h4>
+            <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
+
+            <h4>Coder Forge</h4>
+            <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
+
+            <h4>Our Mission</h4>
+            <p>These "forges" also hope to balance some of the shortfalls to the method of training used within some of our educational
+            institutions today, which always appear to be behind the technology that is required by current market forces. At a coder
+            forge the format is flexible enough to change from nodejs to php or from python to whatever the next new big thing is. It
+            is entirely up to those that are present. The coder forges are modeled on the popular "coder-dojo", but with a focus on adults
+            rather than kids, and thus an ability to learn where to find work online and in the locality can also be introduced..</p>
+        </div>
+
+        <div class="col-lg-4">
+            <h4>Location Map</h4>
+            <div id="map"></div>
+
+                <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDlHq-qJTPHgIpjTh-A50F8JjbrmLpDllck&callback=initMap">
+                    function initMap() {
+                        var uluru = { lat: -25.363, lng: 131.044 };
+                        var map = new google.maps.Map(document.getElementById('map'), {
+                            zoom: 4,
+                            center: uluru
+                        });
+                        var marker = new google.maps.Marker({
+                            position: uluru,
+                            map: map
+                        });
+                    }
+                </script>
+
+            <h4>Calendar</h4>
+            <iframe src="https://calendar.google.com/calendar/embed?height=300&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=risf6q9ee8mskpt1brjs2qgm70%40group.calendar.google.com&amp;color=%235F6B02&amp;ctz=Europe%2FDublin"
+                style="border-width:0" width="200" height="300" frameborder="0" scrolling="no"></iframe>
+            <p>This should update with upcoming events</p>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; Company 2017</p>
+    </footer>
+
+</div>
+<!-- /container -->
+
+    <!-- <section>
+
+    </section> -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
+        crossorigin="anonymous"></script>
+    <script>
+        window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+        crossorigin="anonymous"></script>
+    <script src="js/bootstrap.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+</body>
+
+</html>
