@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
 
 <title>CoderForge Template</title>
 
@@ -67,22 +68,23 @@
         </div>
 
         <div class="col-lg-4">
-            <h4>Location Map</h4>
-            <div id="map"></div>
+            <h4>Meetup API</h4>
 
-                <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDlHq-qJTPHgIpjTh-A50F8JjbrmLpDllck&callback=initMap">
-                    function initMap() {
-                        var uluru = { lat: -25.363, lng: 131.044 };
-                        var map = new google.maps.Map(document.getElementById('map'), {
-                            zoom: 4,
-                            center: uluru
-                        });
-                        var marker = new google.maps.Marker({
-                            position: uluru,
-                            map: map
-                        });
-                    }
-                </script>
+        <script>
+            $.ajax({
+                type: "get",
+                url: "https://api.meetup.com/2/events?&sign=true&photo-host=public&group_urlname=Dublin-Coder-Forge&venue_id=25625505&page=20&only=name,time",
+                dataType: "jsonp",
+                contentType: "application/json; charset=utf-8",
+                success: function (data) {
+                    new_data = [];
+                    for (const evt of data.results)
+                        if (evt.name == "Dublin CSS Meetup - La Pausa Cafe")
+                            new_data.push(evt)
+                    console.log(new_data);
+                }
+            })
+        </script>
 
             <h4>Calendar</h4>
             <iframe src="https://calendar.google.com/calendar/embed?height=300&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=risf6q9ee8mskpt1brjs2qgm70%40group.calendar.google.com&amp;color=%235F6B02&amp;ctz=Europe%2FDublin"
@@ -92,7 +94,7 @@
     </div>
 
     <footer class="footer">
-        <p>&copy; Company 2017</p>
+        <p>&copy; Company 2018</p>
     </footer>
 
 </div>
